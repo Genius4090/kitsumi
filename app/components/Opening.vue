@@ -11,7 +11,7 @@ const openingList: string[] = [
 
 <template>
   <section
-    class="py-14 pb-20 border border-borderish rounded-2xl flex flex-col items-center px-5 sm:px-8 md:px-12 w-full max-w-[520px]"
+    class="py-14 pb-20 border border-borderish rounded-2xl flex flex-col items-center px-5 sm:px-8 md:px-12 w-full max-w-[540px]"
   >
     <Headline>Opening hours</Headline>
     <ul class="w-full mt-10 flex flex-col gap-4">

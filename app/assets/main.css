@@ -1,0 +1,101 @@
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+    background-color: #0a0b0a;
+    color: #efe7d2;
+}
+
+html,
+body {
+    overflow-x: clip;
+}
+
+
+.containers {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+@media (min-width: 640px) {
+    .containers {
+        padding-inline: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .containers {
+        padding-inline: 2rem;
+    }
+}
+
+
+
+/* Minimal scrollbar */
+::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #111;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #5e5d5d;
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-pinkish
+  }
+
+
+  ::selection {
+    @apply bg-pinkish;
+    color: white;
+  }
+
+
+/* Page transitions (nuxt.config app.pageTransition) */
+.page-enter-active {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.page-leave-active {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.page-enter-from {
+    opacity: 0;
+    transform: translateY(16px);
+}
+
+.page-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-enter-active,
+    .page-leave-active {
+        transition: none;
+    }
+
+    .page-enter-from,
+    .page-leave-to {
+        transform: none;
+    }
+}
+
+
+/* Intro preloader: classes set by the inline head script before first paint */
+html.intro-played .app-preloader {
+    display: none !important;
+}
+
+html.intro-active body {
+    overflow: hidden;
+}
